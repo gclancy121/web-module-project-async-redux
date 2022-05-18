@@ -12,7 +12,7 @@ class LiquorForm extends React.Component {
   }
   render() {
     return (
-        <div>
+        <div className="liquorSearcher">
           <h3>Search Your Liquor:</h3>
           <form onSubmit={this.onSubmit}>
             <input 

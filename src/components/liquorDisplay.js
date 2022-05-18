@@ -5,7 +5,7 @@ import * as actions from '../state/action-creators'
 class LiquorDisplay extends React.Component {
   render () {
     return (
-    <div>
+    <div className="liquorDisplayer">
       {this.props.liquors.ingredients.map(item => {
         return (
           <div key={item.idIngredient}> 

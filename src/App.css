@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.liquorSearcher {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 2px gray solid;
+  width: 20%;
+  margin-left: 40%;
+}
+
+.liquorDisplayer {
+  display: flex;
+  padding: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
