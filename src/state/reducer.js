@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import * as types from './action-types'
 
-const initialCocktails = {
+const initialLiquors = {
   ingredients: [
       {
           idIngredient: "1",
@@ -14,14 +14,14 @@ const initialCocktails = {
   ]
 }
 
-function cocktails(cocktailState=initialCocktails, action) {
+function liquors(liquorState=initialLiquors, action) {
   switch(action.type) {
     default:
-      return cocktailState;
+      return liquorState;
   }
 }
 
 export default combineReducers({
-  cocktails,
+  liquors,
   
 })
