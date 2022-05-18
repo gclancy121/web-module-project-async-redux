@@ -1,23 +1,22 @@
 import * as types from './action-types';
 import axios from 'axios';
 
-const URL = `www.thecocktaildb.com/api/json/v1/1/search.php?i=`;
-
 export function searchLiquor(liquor) {
   return function(dispatch) {
-    axios.get(`${URL}${liquor}`)
+    axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${liquor}`)
     .then(res => {
-      debugger
+      const searchedLiquor = res.data.ingredients
+      dispatch({type: types.FIND_LIQUOR, payload: searchedLiquor})
     })
     .catch(err => {
-      debugger
+      console.log(err)
     })
   }
 }
 
-export function changeInput({name, value}) {
+export function changeInput(value) {
   return {
     type: types.INPUT_CHANGE,
-    payload: {name, value}
+    payload: {value}
   }
 }

@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from './state/action-creators'
 
-import Liquor from './components/liquorDisplay';
+import LiquorForm from './components/liquorForm';
+import LiquorDisplay from './components/liquorDisplay';
 
 
 import './App.css';
@@ -15,7 +16,8 @@ function App(props) {
         <p>Made courtesy of <a href="https://www.thecocktaildb.com/api.php" target="_blank">TheCocktailDB</a></p>
       </div>
       
-      <Liquor />
+      <LiquorForm />
+      <LiquorDisplay />
     </>
   );
 }
