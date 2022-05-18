@@ -1,1 +1,3 @@
-export const GET_COCKTAILS = "GET_COCKTAILS"
+export const GET_COCKTAILS = "GET_COCKTAILS";
+export const INPUT_CHANGE = "INPUT_CHANGE";
+

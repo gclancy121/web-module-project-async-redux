@@ -14,3 +14,10 @@ export function searchLiquor(liquor) {
     })
   }
 }
+
+export function changeInput({name, value}) {
+  return {
+    type: types.INPUT_CHANGE,
+    payload: {name, value}
+  }
+}

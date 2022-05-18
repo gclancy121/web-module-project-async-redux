@@ -14,12 +14,7 @@ function App(props) {
         <h1>Liquor Data Fetcher</h1>
         <p>Made courtesy of <a href="https://www.thecocktaildb.com/api.php" target="_blank">TheCocktailDB</a></p>
       </div>
-
-      <div>
-        <h3>Search Your Liquor:</h3>
-        <input type="text"></input>
-        <button>Search</button>
-      </div>
+      
       <Liquor />
     </>
   );
