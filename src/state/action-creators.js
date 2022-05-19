@@ -6,7 +6,13 @@ export function searchLiquor(liquor) {
     axios.get(`https://www.thecocktaildb.com/api/json/v1/1/search.php?i=${liquor}`)
     .then(res => {
       const searchedLiquor = res.data.ingredients
-      dispatch({type: types.FIND_LIQUOR, payload: searchedLiquor})
+      if (searchedLiquor !== null) {
+        dispatch({type: types.FIND_LIQUOR, payload: searchedLiquor})
+      }
+      else {
+        const onFail = [{idIngredient: Date.now(), strDescription: 'Error: invalid input.', strIngredient: 'Nothing!'}]
+        dispatch({type: types.FIND_LIQUOR, payload: onFail})
+      }      
     })
     .catch(err => {
       console.log(err)

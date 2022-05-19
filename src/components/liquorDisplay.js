@@ -9,6 +9,8 @@ class LiquorDisplay extends React.Component {
       {this.props.liquors.ingredients.map(item => {
         return (
           <div key={item.idIngredient}> 
+          <h5>Ingredient Name</h5>
+          <p>{item.strIngredient}</p>
           <h5>Liquor Description:</h5>
           <p>{item.strDescription}</p>
           </div>
